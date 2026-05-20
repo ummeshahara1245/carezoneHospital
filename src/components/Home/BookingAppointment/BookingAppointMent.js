@@ -27,7 +27,7 @@ const BookingAppointMent = () => {
 
         try {
             // আমাদের লোকাল নোড জেএস সার্ভারের ইউআরএল
-            const serverUrl = 'http://localhost:5000/api/appointments';
+            const serverUrl = 'https://carezon-server.vercel.app/api/appointments';
 
             const response = await axios.post(serverUrl, appointmentInfo);
 
