@@ -131,7 +131,7 @@ const HospitalGallery = () => {
                     <div className="col">
                         <div className="card h-100 border-0 shadow-sm overflow-hidden rounded-3">
                             <img
-                                src="https://images.unsplash.com/photo-1628719749669-44015c344fbe?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTF8fGhvc3BpdGFsfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                                src="https://images.pexels.com/photos/8460049/pexels-photo-8460049.jpeg"
                                 className="card-img-top object-cover img-hover"
                                 style={{ height: '260px', objectFit: 'cover', transition: 'transform 0.3s ease' }}
                                 alt="Pediatric Department"
