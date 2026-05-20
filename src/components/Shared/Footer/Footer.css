@@ -1,0 +1,189 @@
+/* Main Layout Settings */
+.main {
+    min-height: 550px;
+    background-color: #292c2f;
+    color: white;
+    font-size: 38pt;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Base Footer Configuration */
+footer {
+    width: 100%;
+}
+
+.footer-distributed {
+    background-color: #292c2f;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: bold 16px sans-serif;
+    padding: 55px 50px;
+    margin-top: 80px;
+
+    /* Flexbox ব্যবহার করে ৩টি কলামকে এক লাইনে সাজানো */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/* Footer Columns Base Layout */
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right {
+    flex: 1;
+    /* কলামগুলো সমানভাবে জায়গা ভাগ করে নেবে */
+    min-width: 250px;
+    /* স্ক্রিন ছোট হলে কলাম যেন একদম চ্যাপ্টা না হয়ে যায় */
+}
+
+/* --- Left Section Styles --- */
+.footer-distributed h3 {
+    color: #ffffff;
+    font: normal 36px 'Cookie', cursive;
+    margin: 0;
+}
+
+.footer-distributed h3 span {
+    color: #5383d3;
+}
+
+.footer-distributed .footer-links {
+    color: #ffffff;
+    margin: 20px 0 12px;
+    padding: 0;
+}
+
+.footer-distributed .footer-links a {
+    display: inline-block;
+    line-height: 1.8;
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+.footer-distributed .footer-links a:hover {
+    color: #5383d3;
+}
+
+.footer-distributed .footer-company-name {
+    color: #8f9296;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+}
+
+/* --- Center Section Styles --- */
+.footer-distributed .footer-center>div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.footer-distributed .footer-center i {
+    background-color: #33383b;
+    color: #ffffff;
+    font-size: 18px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 38px;
+    margin-right: 15px;
+    flex-shrink: 0;
+    /* আইকন যেন ছোট না হয়ে যায় */
+}
+
+.footer-distributed .footer-center p {
+    color: #ffffff;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.footer-distributed .footer-center p span {
+    display: block;
+    font-weight: normal;
+    font-size: 14px;
+    color: #8f9296;
+}
+
+.footer-distributed .footer-center p a {
+    color: #5383d3;
+    text-decoration: none;
+}
+
+/* --- Right Section Styles --- */
+.footer-distributed .footer-company-about {
+    line-height: 20px;
+    color: #92999f;
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.footer-distributed .footer-company-about span {
+    display: block;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.footer-distributed .footer-icons {
+    margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color: #33383b;
+    border-radius: 50%;
+    /* চারকোনা থেকে সুন্দর গোল শেপ করার জন্য */
+    font-size: 16px;
+    color: #ffffff;
+    margin-right: 8px;
+    margin-bottom: 5px;
+    transition: all 0.3s ease;
+}
+
+.footer-distributed .footer-icons a:hover {
+    background-color: #5383d3;
+    transform: translateY(-3px);
+    /* হোভার করলে হালকা উপরে উঠবে */
+}
+
+/* 📱 Responsive Media Query (Mobile & Tablet Optimization) */
+@media (max-width: 880px) {
+    .footer-distributed {
+        font: bold 14px sans-serif;
+        padding: 40px 30px;
+        flex-direction: column;
+        /* ছোট স্ক্রিনে কলামগুলো নিচে নিচে নেমে যাবে */
+        text-align: center;
+        gap: 40px;
+    }
+
+    .footer-distributed .footer-center>div {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .footer-distributed .footer-center i {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .main {
+        font-size: 24pt;
+        min-height: 300px;
+    }
+}

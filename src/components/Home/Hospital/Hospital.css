@@ -1,0 +1,81 @@
+/* --- Services Section Base Styles --- */
+.services-section {
+    background-color: #f8fafd;
+    /* হালকা প্রিমিয়াম ব্যাকগ্রাউন্ড কালার */
+    position: relative;
+    overflow: hidden;
+}
+
+/* --- Header & Typography Art --- */
+.services-header .subtitle {
+    font-size: 13px;
+    letter-spacing: 2px;
+    color: #5383d3;
+    font-weight: 700;
+    display: inline-block;
+}
+
+.services-header .highlight-text {
+    color: #304770;
+    position: relative;
+    z-index: 1;
+}
+
+/* শিরোনামের নিচে সুন্দর একটি বর্ডার/লাইন */
+.services-header .accent-bar {
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #5383d3, #304770);
+    border-radius: 2px;
+}
+
+.services-header p {
+    max-width: 600px;
+}
+
+/* --- Card Hover & Animation Enhancements --- */
+/* (ধরে নিচ্ছি HospitalCard এর মেইন ডিভটি বুটস্ট্র্যাপের .card ক্লাস ধারণ করে) */
+.services-grid .col {
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* কার্ডের ওপর মাউস নিলে কার্ডটি হালকা উপরে উঠবে এবং গ্লোয়িং শ্যাডো আসবে */
+.services-grid .col:hover {
+    transform: translateY(-8px);
+}
+
+.services-grid .col .card {
+    border: none !important;
+    border-radius: 16px !important;
+    /* মডার্ন রাউন্ডেড কর্নার */
+    box-shadow: 0 10px 30px rgba(48, 71, 112, 0.05) !important;
+    transition: box-shadow 0.3s ease, border-top 0.3s ease !important;
+    overflow: hidden;
+}
+
+.services-grid .col:hover .card {
+    box-shadow: 0 20px 40px rgba(48, 71, 112, 0.12) !important;
+    border-top: 4px solid #5383d3 !important;
+    /* হোভার করলে উপরে নীল বর্ডার স্ট্রিপ আসবে */
+}
+
+/* কার্ডের ভেতরের ইমেজ জুম ইফেক্ট (যদি ইমেজ থাকে) */
+.services-grid .col .card img {
+    transition: transform 0.5s ease;
+}
+
+.services-grid .col:hover .card img {
+    transform: scale(1.06);
+}
+
+/* বাটন বা লিংক থাকলে তার স্টাইল */
+.services-grid .card .btn-link {
+    color: #304770;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.services-grid .card .btn-link:hover {
+    color: #5383d3;
+}

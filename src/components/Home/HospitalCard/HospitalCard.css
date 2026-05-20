@@ -1,0 +1,85 @@
+/* --- Hospital Card Base Styles --- */
+.hospital-card {
+    border: none !important;
+    border-radius: 16px !important;
+    background: #ffffff;
+    box-shadow: 0 10px 30px rgba(48, 71, 112, 0.06);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+    overflow: hidden;
+}
+
+/* --- Image Section Styling (ইমেজ বড় করার জন্য আপডেট করা) --- */
+.card-img-container {
+    height: 220px;
+    /* কন্টেইনারের হাইট কিছুটা বাড়ানো হয়েছে */
+    background-color: #f4f7fc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    /* প্যাডিং কমানো হয়েছে যেন ইমেজ বেশি জায়গা পায় */
+    overflow: hidden;
+    position: relative;
+}
+
+.hospital-card-img {
+    max-height: 95%;
+    /* আগে ৮৫% ছিল, এখন ৯৫% করা হয়েছে */
+    max-width: 95%;
+    /* আগে ৮৫% ছিল, এখন ৯৫% করা হয়েছে */
+    object-fit: contain;
+    transition: transform 0.4s ease;
+}
+
+/* হোভার করলে ইমেজ সুন্দরভাবে একটু জুম হবে */
+.hospital-card:hover .hospital-card-img {
+    transform: scale(1.05);
+}
+
+/* --- Typography Styling --- */
+.card-title-custom {
+    color: #304770;
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+}
+
+.card-text-custom {
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* --- Premium Button Design (ছোট এবং গুছানো) --- */
+.btn-details {
+    background-color: #304770;
+    color: #ffffff;
+    border: none;
+    padding: 8px 20px;
+    /* প্যাডিং কমিয়ে সাইজ ছোট রাখা হয়েছে */
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 6px;
+    width: auto;
+    /* ফুল-উইডথ বাদ দিয়ে টেক্সট অনুযায়ী সাইজ হবে */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    transition: all 0.3s ease;
+}
+
+/* বাটন হোভার ইফেক্ট */
+.btn-details:hover {
+    background-color: #5383d3;
+    box-shadow: 0 4px 12px rgba(83, 131, 211, 0.35);
+}
+
+/* বাটনের ভেতরের অ্যারো আইকন অ্যানিমেশন */
+.btn-details i {
+    transition: transform 0.3s ease;
+}
+
+.btn-details:hover i {
+    transform: translateX(4px);
+    /* হোভার করলে তীরটি ডানে সরবে */
+}

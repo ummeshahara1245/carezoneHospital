@@ -1,0 +1,138 @@
+/* --- Main Slider Wrapper --- */
+.main-slider {
+    height: 75vh;
+    min-height: 500px;
+    background-color: #1a1c1e;
+    position: relative;
+}
+
+/* --- Image & Dark Overlay --- */
+.slider-img {
+    object-fit: cover;
+    filter: brightness(0.85);
+    /* ইমেজকে হালকা ডার্ক করা হলো টেক্সট স্পষ্ট করার জন্য */
+}
+
+.slider-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(26, 28, 30, 0.4), rgba(26, 28, 30, 0.75));
+    z-index: 1;
+}
+
+/* --- Content Wrapper & Layers --- */
+.main-slider .carousel-caption {
+    z-index: 2;
+    bottom: 0;
+}
+
+/* --- Typography & Animations --- */
+.slider-subtitle {
+    font-size: 14px;
+    font-weight: 700;
+    color: #5383d3;
+    /* প্রফেশনাল থিম ব্লু */
+    letter-spacing: 3px;
+    animation: fadeInUp 0.8s ease backwards;
+}
+
+.slider-title {
+    font-size: 2.8rem;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+    animation: fadeInUp 1s ease 0.2s backwards;
+}
+
+.slider-text {
+    font-size: 1rem;
+    max-width: 650px;
+    line-height: 1.6;
+    color: #e2e8f0;
+    animation: fadeInUp 1s ease 0.4s backwards;
+}
+
+/* --- Custom Premium Button --- */
+.btn-slider-primary {
+    background: #304770;
+    color: #ffffff;
+    border: none;
+    padding: 12px 30px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 50px;
+    /* রাউন্ডেড পিল স্টাইল */
+    box-shadow: 0 4px 15px rgba(48, 71, 112, 0.3);
+    transition: all 0.3s ease;
+    animation: fadeInUp 1s ease 0.6s backwards;
+}
+
+.btn-slider-primary:hover {
+    background: #5383d3;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(83, 131, 211, 0.4);
+}
+
+/* --- Navigation Controls & Dots Customization --- */
+.custom-control {
+    width: 6%;
+    z-index: 3;
+}
+
+.custom-indicators [data-bs-target] {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    /* ডটগুলোকে গোল করা হলো */
+    margin: 0 6px;
+    background-color: #ffffff;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+}
+
+.custom-indicators .active {
+    opacity: 1;
+    background-color: #5383d3;
+    transform: scale(1.2);
+}
+
+/* 🚀 CSS Keyframe Animation for Text Magic */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 📱 Responsive Control for Mobile Layouts */
+@media (max-width: 768px) {
+    .main-slider {
+        height: 60vh;
+        min-height: 400px;
+    }
+
+    .slider-title {
+        font-size: 1.8rem;
+    }
+
+    .slider-text {
+        font-size: 0.9rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        /* মোবাইলে অতিরিক্ত লেখা হাইড রাখবে */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .btn-slider-primary {
+        padding: 10px 24px;
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,44 @@
+[
+    {
+        "_id": "1",
+        "name": "CRITICAL CARE",
+        "short_des": "TO PROVIDE SERVICES TO ILL PATIENTS",
+        "description": "quite atmosphere that allows for total resting and healing to take place. we use intelligent ventilators to help improve and surpport our patients condition. Our counsellor will also be at hand to offer support to relatives, lessening their emotional burden. We admit various cases including medical, cardiac and surgical. We have a dedicated neonatal intensive care unit which is able to take care of all neonatal cases. We have had many success stories as a result of the great multidisciplinary team and timely intervention.",
+        "imageURL": "https://images.unsplash.com/photo-1584432810601-6c7f27d2362b?ixlib=rb-1.2.1&ix_id=MnwxMjA3fDB8MHxzZWFyY2h8N3x8aGVhbHRoJTIwY2FyZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+    },
+    {
+        "_id": "2",
+        "name": "NUTRITONS SERVICE",
+        "short_des": "THERE ARE QUALIFIED DOCTORS IN OUR HOSPITAL",
+        "description": "Our Hospital CareZone has highly experienced Nutritionists with the expertise to address diet-related questions and concerns. What you eat and drink has a direct impact on your overrall health.Our clinic runs from Monday - Friday 8:00 am - 5:00 pm and On Saturday 8:00 am - 12:00 noon",
+        "imageURL": "https://images.unsplash.com/photo-1527613426441-4da17471b66d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDl8fHF1YWxpZmllZCUyMGRvY3RvcnN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+    },
+    {
+        "_id": "3",
+        "name": "OUR AMBULANCE SERVICES",
+        "short_des": "THESE SERVICES OUR PATIENT GET FROM US",
+        "description": "Our ambulance is fully equipped with a full patient life support during transportation from the site to the main hospital. This means no time is lost as treatment goes on while the patient is on transit.",
+        "imageURL": " https://images.unsplash.com/photo-1587745416684-47953f16f02f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGF0aWVudCUyMHNlcnZpY2VzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+    },
+    {
+        "_id": "4",
+        "name": "EMERGENCY UNIT",
+        "short_des": "FOR EMERGENCY SITUATION",
+        "description": "An emergency department, also known as an accident & emergency department, emergency room, emergency ward or casualty department, is a medical treatment facility specializing in emergency medicine, the acute care of patients who present without prior appointment; either by their own means or by that of an ambulance.So we care about emergency thats why we have emergency supports for our patient",
+        "imageURL": "https://images.unsplash.com/photo-1517120026326-d87759a7b63b?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8ZW1lcmdlbmN5JTIwdW5pdHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+    },
+    {
+        "_id": "5",
+        "name": "LAB TEST REPORTS",
+        "short_des": "FOR TEST AND THE REPORTS",
+        "description": "Our imaging department is equipped with modern diagnostic equipment such as: Digital X-Ray machine  16 slice CT Scan machine 4D Ultrasound machine  We are supported by experienced Radiologists, an Interventional Radiologist and a panel of Tele radiologists giving 24 hours support.",
+        "imageURL": "https://images.unsplash.com/photo-1582719471327-5bd41fcf7f7f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDF8fGxhYiUyMHRlc3QlMjByZXBvcnRzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+    },
+    {
+        "_id": "6",
+        "name": "VISITING HOURS",
+        "short_des": "OUR DOCTOR WILL VISIT YOU AND CHECK YOUR SITUATION",
+        "description": "A doctor's visit, also known as a physician office visit or a consultation, or a ward round in an inpatient care context, is a meeting between a patient with a physician to get health advice or treatment plan for a symptom or condition, most often at a professional health facility such as a doctor's office, clinic or hospital. At some specific times Our doctors will visit you and suggest you what to do, what medicines you need now.",
+        "imageURL": "https://images.unsplash.com/photo-1576089275776-b6cd5deabdad?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzh8fGhvc3BpdGFsJTIwdmlzaXRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+    }
+]
