@@ -1,30 +1,24 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react'; // 👈 ছোট হাতের import
 import HospitalCard from '../HospitalCard/HospitalCard';
-import './Hospital.css'; // 🌟 এক্সটার্নাল সিএসএস ফাইল ইমপোর্ট করা হলো
+import './Hospital.css';
+
+// 🎯 src এর ভেতরে নিয়ে আসার পর একদম সহজ পাথ
+import fakeData from './fakeData.json';
 
 const Hospital = () => {
     const [hospital, setHospital] = useState([]);
 
-    // Loading Data 
     useEffect(() => {
-        fetch('/fakeData.json')
-            .then(res => {
-                if (!res.ok) {
-                    throw new Error("Network response was not ok");
-                }
-                return res.json();
-            })
-            .then(data => {
-                setHospital(data);
-            })
-            .catch(err => console.error("Error fetching fake data:", err));
+        if (fakeData) {
+            setHospital(fakeData);
+        }
     }, []);
 
     return (
         <section id="services" className="services-section py-5">
             <div className="container">
 
-                {/* 🎯 হেডার সেকশনটি আরও মডার্ন করা হলো */}
+                {/* হেডার সেকশন */}
                 <div className="services-header text-center mb-5">
                     <span className="subtitle text-uppercase">CareZone Capabilities</span>
                     <h2 className="fw-black display-5 mt-2">
@@ -36,15 +30,21 @@ const Hospital = () => {
                     </p>
                 </div>
 
-                {/* 📦 সার্ভিসেস কার্ড গ্রিড */}
+                {/* সার্ভিসেস গ্রিড */}
                 <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 services-grid">
                     {
-                        hospital.map((item, index) => (
-                            <HospitalCard
-                                key={item.id || index}
-                                hospital={item}
-                            />
-                        ))
+                        hospital.length > 0 ? (
+                            hospital.map((item, index) => (
+                                <HospitalCard
+                                    key={item.id || index}
+                                    hospital={item}
+                                />
+                            ))
+                        ) : (
+                            <div className="text-center w-100 py-5">
+                                <p className="text-muted">Loading services...</p>
+                            </div>
+                        )
                     }
                 </div>
             </div>
