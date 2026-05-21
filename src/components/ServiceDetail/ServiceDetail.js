@@ -1,45 +1,17 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import './ServiceDetail.css';
 
+// 🌟 ১. তোমার 'hospital' ফোল্ডার থেকে সরাসরি JSON ফাইলটি ইম্পোর্ট করো
+// (পাথটি খেয়াল করো: '../../hospital/fakeData.json' যদি ঠিক না থাকে, তবে সঠিক পাথটি দাও)
+import servicesData from '../Home/Hospital/fakeData.json';
 const ServiceDetail = () => {
     const { id } = useParams();
-    const [services, setServices] = useState([]);
-    const [loading, setLoading] = useState(true);
 
-    // Fetching Fake Data
-    useEffect(() => {
-        fetch('/fakeData.json')
-            .then(res => {
-                if (!res.ok) throw new Error("Failed to fetch");
-                return res.json();
-            })
-            .then(data => {
-                setServices(data);
-                setLoading(false);
-            })
-            .catch(err => {
-                console.error(err);
-                setLoading(false);
-            });
-    }, []);
+    // 🌟 ২. ফেচ করার দরকার নেই, সরাসরি ইম্পোর্ট করা ডেটা থেকে আইডি খুঁজবে
+    const exactItem = servicesData?.find(hospital => hospital._id == id || hospital.id == id);
 
-    // আইডি ম্যাচ করে নির্দিষ্ট সার্ভিসটি খুঁজে বের করা (filter এর চেয়ে find ব্যবহার করা ভালো)
-    // == ব্যবহার করা হয়েছে যাতে string বা number যেকোনো টাইপ আইডি ম্যাচ করে যায়
-    const exactItem = services.find(hospital => hospital._id == id || hospital.id == id);
-
-    // ডেটা লোড হওয়ার আগ পর্যন্ত স্পিনার বা লোডিং মেসেজ দেখাবে (ক্র্যাশ হওয়া আটকাতে)
-    if (loading) {
-        return (
-            <div className="d-flex justify-content-center align-items-center my-5 py-5">
-                <div className="spinner-border text-primary" role="status">
-                    <span className="visually-hidden">Loading...</span>
-                </div>
-            </div>
-        );
-    }
-
-    // যদি কোনো কারণে আইডি দিয়ে ডেটা খুঁজে না পাওয়া যায়
+    // 🌟 ৩. যদি কোনো কারণে আইডি ম্যাচ না করে
     if (!exactItem) {
         return (
             <div className="container text-center my-5 py-5">
@@ -75,7 +47,7 @@ const ServiceDetail = () => {
                             </h2>
                             <hr className="my-3 opacity-25" />
                             <p className="card-text text-secondary leading-relaxed mb-4" style={{ fontSize: '1.05rem' }}>
-                                {exactItem.description}
+                                {exactItem.short_des || exactItem.description}
                             </p>
 
                             <div className="d-flex gap-2">
